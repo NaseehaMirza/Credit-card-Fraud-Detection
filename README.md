@@ -12,23 +12,21 @@ High-Performance Classifier: Developed using XGBoost, tuned to prioritize detect
 
 Interactive Dashboard: A full-stack Streamlit web application for manual transaction checking and batch processing.
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 Language: Python
 
 Libraries: Scikit-Learn, XGBoost, Pandas, NumPy, Imbalanced-learn
 
 Deployment: Streamlit
 
-Version Control: Git
-
-📊 Dataset Information
+## 📊 Dataset Information
 The project uses the Kaggle Credit Card Fraud Detection dataset.
 
 PCA Transformation: Features V1-V28 are principal components obtained with PCA for privacy reasons.
 
 Class Imbalance: 492 frauds out of 284,807 transactions.
 
-⚙️ How to Run
+## ⚙️ How to Run
 
 Install Dependencies:
 
@@ -48,8 +46,8 @@ ROC-AUC Score: 0.98.
 
 Confusion Matrix: Minimizes False Negatives to ensure financial security.
 
-Project Structure:
-
+## Project Structure:
+```text
 Credit-Card-Fraud-Detection/
 ├── data/
 │   └── creditcard.csv          # The Kaggle dataset (not uploaded to GitHub due to size)
