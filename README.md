@@ -1,92 +1,92 @@
-💳 AI/ML Internship – Mini Project
-Credit Card Fraud Detection System
-📌 Project Overview
+##  AI/ML Internship – Mini Project
+## Credit Card Fraud Detection System💳
+
+## 📌 Project Overview
 
 Credit card fraud costs financial institutions billions of dollars annually. This project implements a machine learning-based fraud detection system to identify fraudulent transactions in real-time.
 
 Since the dataset is highly imbalanced (fraud accounts for less than 0.2% of transactions), advanced sampling techniques and gradient-boosting algorithms were used to ensure high recall and precision.
 
-🚀 Key Features
+## 🚀 Key Features
 
-Imbalance Handling
+- **Imbalance Handling** 
 Utilized SMOTE (Synthetic Minority Over-sampling Technique) to balance the training data.
 
-Anomaly Detection
+- **Anomaly Detection**
 Integrated Isolation Forest to detect outliers and uncover potential new fraud patterns.
 
-High-Performance Classifier
+- **High-Performance Classifier**
 Built using XGBoost, tuned to prioritize high Recall (detecting fraud) while minimizing false alarms.
 
-Interactive Dashboard
+- **Interactive Dashboard**
 Developed a full-stack Streamlit web application for:
 
-Manual transaction fraud checking
+  - Manual transaction fraud checking
 
-Batch transaction processing
+  - Batch transaction processing
 
-🛠️ Tech Stack
+## 🛠️ Tech Stack
 
-Language:
+## Language:
 
-Python
+- Python
 
-Libraries:
+## Libraries:
 
-Scikit-Learn
+- Scikit-Learn
 
-XGBoost
+- XGBoost
 
-Pandas
+- Pandas
 
-NumPy
+- NumPy
 
-Imbalanced-learn
+- Imbalanced-learn
 
-Deployment:
+## Deployment:
 
-Streamlit
+- Streamlit
 
-📊 Dataset Information
+## 📊 Dataset Information
 
 The project uses the Kaggle Credit Card Fraud Detection Dataset.
 
-PCA Transformation:
+- PCA Transformation:
 Features V1–V28 are principal components obtained using PCA for privacy protection.
 
-Class Imbalance:
+- Class Imbalance:
 
-Total Transactions: 284,807
+  - Total Transactions: 284,807
 
-Fraud Cases: 492
+  - Fraud Cases: 492
 
-Fraud Percentage: ~0.17%
+  - Fraud Percentage: ~0.17%
 
-⚙️ How to Run
-1️⃣ Install Dependencies
+## ⚙️ How to Run
+- Install Dependencies
 pip install -r requirements.txt
-2️⃣ Run the Training Notebook
+- Run the Training Notebook  (Ensure creditcard.csv is placed inside the data/ folder.)
 
-Ensure creditcard.csv is placed inside the data/ folder.
+   - **Open and run:**
 
-Open and run:
+      - **notebooks/Fraud_Detection.ipynb**  (This will generate the trained model files inside the models/ directory.)
 
-notebooks/Fraud_Detection.ipynb
+- Launch the Streamlit Dashboard
+  
+  - **streamlit run src/app.py**
 
-This will generate the trained model files inside the models/ directory.
+## 📈 Results
 
-3️⃣ Launch the Streamlit Dashboard
-streamlit run src/app.py
-📈 Results
-
-Recall: ~92%
+- Recall: ~92%
 (Successfully detects the majority of fraudulent transactions)
 
-ROC-AUC Score: 0.98
+- ROC-AUC Score: 0.98
 
-Confusion Matrix:
+- Confusion Matrix:
 Optimized to minimize False Negatives, ensuring stronger financial security.
 
-📂 Project Structure
+## 📂 Project Structure
+```text
 Credit-Card-Fraud-Detection/
 │
 ├── data/
