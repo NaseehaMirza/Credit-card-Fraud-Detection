@@ -1,63 +1,108 @@
-# AI_ML Internship - Mini Project
-# Credit Card Fraud Detection System
+💳 AI/ML Internship – Mini Project
+Credit Card Fraud Detection System
 📌 Project Overview
-Credit card fraud costs financial institutions billions of dollars annually. This project implements a machine learning solution to identify fraudulent transactions in real-time. Given the highly imbalanced nature of the dataset (where fraud accounts for less than 0.2% of transactions), I utilized advanced sampling techniques and gradient-boosting algorithms to ensure high recall and precision.
+
+Credit card fraud costs financial institutions billions of dollars annually. This project implements a machine learning-based fraud detection system to identify fraudulent transactions in real-time.
+
+Since the dataset is highly imbalanced (fraud accounts for less than 0.2% of transactions), advanced sampling techniques and gradient-boosting algorithms were used to ensure high recall and precision.
 
 🚀 Key Features
-Imbalance Handling: Utilized SMOTE (Synthetic Minority Over-sampling Technique) to balance the training data.
 
-Anomaly Detection: Integrated Isolation Forest to identify outliers and potential new fraud patterns.
+Imbalance Handling
+Utilized SMOTE (Synthetic Minority Over-sampling Technique) to balance the training data.
 
-High-Performance Classifier: Developed using XGBoost, tuned to prioritize detecting fraud (Recall) while minimizing false alarms.
+Anomaly Detection
+Integrated Isolation Forest to detect outliers and uncover potential new fraud patterns.
 
-Interactive Dashboard: A full-stack Streamlit web application for manual transaction checking and batch processing.
+High-Performance Classifier
+Built using XGBoost, tuned to prioritize high Recall (detecting fraud) while minimizing false alarms.
 
-## 🛠️ Tech Stack
-Language: Python
+Interactive Dashboard
+Developed a full-stack Streamlit web application for:
 
-Libraries: Scikit-Learn, XGBoost, Pandas, NumPy, Imbalanced-learn
+Manual transaction fraud checking
 
-Deployment: Streamlit
+Batch transaction processing
 
-## 📊 Dataset Information
-The project uses the Kaggle Credit Card Fraud Detection dataset.
+🛠️ Tech Stack
 
-PCA Transformation: Features V1-V28 are principal components obtained with PCA for privacy reasons.
+Language:
 
-Class Imbalance: 492 frauds out of 284,807 transactions.
+Python
 
-## ⚙️ How to Run
+Libraries:
 
-Install Dependencies:
+Scikit-Learn
 
-Bash
+XGBoost
+
+Pandas
+
+NumPy
+
+Imbalanced-learn
+
+Deployment:
+
+Streamlit
+
+📊 Dataset Information
+
+The project uses the Kaggle Credit Card Fraud Detection Dataset.
+
+PCA Transformation:
+Features V1–V28 are principal components obtained using PCA for privacy protection.
+
+Class Imbalance:
+
+Total Transactions: 284,807
+
+Fraud Cases: 492
+
+Fraud Percentage: ~0.17%
+
+⚙️ How to Run
+1️⃣ Install Dependencies
 pip install -r requirements.txt
-Run the Training Notebook:
-Ensure the creditcard.csv is in the data/ folder and run the Fraud_Detection.ipynb to generate the model files.
+2️⃣ Run the Training Notebook
 
-Launch the Dashboard:
+Ensure creditcard.csv is placed inside the data/ folder.
 
-Bash
+Open and run:
+
+notebooks/Fraud_Detection.ipynb
+
+This will generate the trained model files inside the models/ directory.
+
+3️⃣ Launch the Streamlit Dashboard
 streamlit run src/app.py
 📈 Results
-Recall: ~92% (Successfully identifying the vast majority of fraud).
 
-ROC-AUC Score: 0.98.
+Recall: ~92%
+(Successfully detects the majority of fraudulent transactions)
 
-Confusion Matrix: Minimizes False Negatives to ensure financial security.
+ROC-AUC Score: 0.98
 
-## Project Structure:
-```text
+Confusion Matrix:
+Optimized to minimize False Negatives, ensuring stronger financial security.
+
+📂 Project Structure
 Credit-Card-Fraud-Detection/
+│
 ├── data/
-│   └── creditcard.csv          # The Kaggle dataset (not uploaded to GitHub due to size)
+│   └── creditcard.csv                # Kaggle dataset (not uploaded due to size)
+│
 ├── models/
-│   ├── fraud_detection_model.pkl # The trained XGBoost classifier
-│   └── scaler.pkl                # The StandardScaler for Time and Amount
+│   ├── fraud_detection_model.pkl     # Trained XGBoost model
+│   └── scaler.pkl                    # StandardScaler for Time & Amount
+│
 ├── notebooks/
-│   └── Fraud_Detection.ipynb    # Full data analysis and model training
+│   └── Fraud_Detection.ipynb         # Data analysis & model training
+│
 ├── src/
-│   ├── app.py                   # Streamlit web application dashboard
-│   └── preprocess.py            # Reusable data cleaning and scaling logic
-├── requirements.txt             # Project dependencies
-└── README.md                    # Project documentation
+│   ├── app.py                        # Streamlit dashboard
+│   └── preprocess.py                 # Data preprocessing logic
+│
+├── requirements.txt                  # Project dependencies
+│
+└── README.md                         # Project documentation
